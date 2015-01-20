@@ -16,6 +16,13 @@
 #include <boost/math/special_functions/laguerre.hpp>
 #include <boost/math/special_functions/spherical_harmonic.hpp>
 
+#ifdef Q_OS_WIN
+// ambiguous call issues on windows with MSVC compiler
+#include <qmath.h>
+#define sqrt(x) qSqrt((x))
+// fix all the errors about truncating doubles when casting to float
+#pragma warning (disable:4305)
+#endif
 
 using namespace boost::math;
 using namespace std;

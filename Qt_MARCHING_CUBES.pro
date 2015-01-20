@@ -10,10 +10,16 @@ SOURCES += main.cpp \
 HEADERS += mainwindow.h \
     marching_cubes.h
 FORMS += 
+macx {
+    INCLUDEPATH += /usr/local/include
+}
 
-INCLUDEPATH += /usr/local/include
+win32 {
+    INCLUDEPATH += "C:/Program Files/boost/boost_1_57_0"
+}
 #LIBS += -lglut -lGLU
 
 DISTFILES += \
     README.md \
-    qt_marching_cubes_screenshot.png
+    qt_marching_cubes_screenshot.png \
+    qt_marching_cubes_screenshot_2.png

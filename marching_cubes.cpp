@@ -7,8 +7,13 @@
 
 #include "marching_cubes.h"
 #include <qgl.h>
+#ifndef Q_OS_WIN
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
+#else
+#include "gl/GL.h"
+#include "gl/GLU.h"
+#endif
 
 GL_Widget::GL_Widget(QWidget *parent, GLuint resolution) : QGLWidget(parent)
 {
