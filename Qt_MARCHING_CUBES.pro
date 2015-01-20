@@ -10,3 +10,10 @@ SOURCES += main.cpp \
 HEADERS += mainwindow.h \
     marching_cubes.h
 FORMS += 
+
+INCLUDEPATH += /usr/local/include
+#LIBS += -lglut -lGLU
+
+DISTFILES += \
+    README.md \
+    qt_marching_cubes_screenshot.png

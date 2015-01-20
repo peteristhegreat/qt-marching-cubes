@@ -8,6 +8,10 @@
 #include "mainwindow.h"
 #include "marching_cubes.h"
 
+#include <QMenu>
+#include <QMenuBar>
+#include <QStatusBar>
+
 MainWindow::MainWindow(QMainWindow *parent, GLuint Resolution, Qt::WindowFlags flags): QMainWindow(parent,flags)
 {
     //gl_widget gives access to GL_Widget class

@@ -6,6 +6,9 @@
  */
 
 #include "marching_cubes.h"
+#include <qgl.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
 
 GL_Widget::GL_Widget(QWidget *parent, GLuint resolution) : QGLWidget(parent)
 {
@@ -526,7 +529,7 @@ GLuint GL_Widget::fac(GLuint n)
 //Unnormalized Radial Function
 GLfloat GL_Widget::R(GLuint n, GLuint l, GLfloat r)
 {
-    return 2.0/pow(n,2)*pow(2.0*r/n,l)*exp(-r/n)*fac(n+l)*laguerre(n-l-1,2*l+1,2.0*r/n);
+    return 2.0/pow((qreal)n,(qreal)2)*pow(2.0*r/n,(qreal)l)*exp(-r/n)*fac(n+l)*laguerre(n-l-1,2*l+1,2.0*r/n);
 }
 
 //Unnormalized Eigen Function

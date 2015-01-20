@@ -9,6 +9,8 @@
 #define MAINWINDOW_H_
 
 #include "marching_cubes.h"
+#include <QMainWindow>
+#include <QLabel>
 
 
 /* -------------- Main Window -------------- */
