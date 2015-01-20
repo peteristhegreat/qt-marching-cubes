@@ -9,7 +9,7 @@ Based off of:
 
 This is here, to make it easier for someone else to get started with this project, and to look at porting the example further to Qt, and with fewer boost and glu calls.
 
-Tested on OSX Yosemite
+Tested on OSX Yosemite (clang) and Windows MSVC 2010 opengl.
 
 Example Output
 ----
